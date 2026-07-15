@@ -1,0 +1,42 @@
+# Publish only the TaskEEGDiT source code and the selected release checkpoint.
+/*
+
+# Repository metadata and documentation.
+!/.gitignore
+!/README.md
+!/README_CN.md
+!/requirements.txt
+
+# Main entry points and configuration.
+!/train.py
+!/test.py
+!/config/
+!/config/**
+
+# Core implementation.
+!/src/
+!/src/**
+!/Data_Preparation/
+!/Data_Preparation/**
+!/timemixer/
+!/timemixer/**
+
+# The conditional model requires its precomputed spectral prototypes.
+!/data/
+/data/*
+!/data/spectral_prototypes.pt
+
+# Publish only the selected trained model.
+!/check_points/
+/check_points/*
+!/check_points/conditional/
+/check_points/conditional/*
+!/check_points/conditional/content_3e-05_style_350/
+/check_points/conditional/content_3e-05_style_350/*
+!/check_points/conditional/content_3e-05_style_350/best.pth
+
+# Generated Python and local tool files remain excluded inside allowed trees.
+**/__pycache__/
+*.py[cod]
+*.log
+.DS_Store

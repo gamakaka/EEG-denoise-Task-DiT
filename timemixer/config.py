@@ -1,0 +1,33 @@
+from types import SimpleNamespace
+
+
+model_cfg = SimpleNamespace(
+    task_name="short_term_forecast",
+    label_len=1,
+    top_k=5,
+    num_kernels=6,
+    enc_in=64,
+    dec_in=64,
+    c_out=64,
+    d_model=128,
+    n_heads=8,
+    e_layers=3,
+    d_layers=1,
+    d_ff=64,
+    moving_avg=5,
+    factor=1,
+    dropout=0.1,
+    embed="timeF",
+    activation="gelu",
+    output_attention=True,
+    channel_independence=0,
+    decomp_method="moving_avg",
+    use_norm=1,
+    down_sampling_layers=4,
+    down_sampling_window=2,
+    down_sampling_method="avg",
+    use_future_temporal_feature=0,
+    seq_len=512,
+    pred_len=512,
+    freq="s",
+)
